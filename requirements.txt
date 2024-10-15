@@ -1,0 +1,17 @@
+requests
+pyttsx3
+SpeechRecognition
+python-decouple
+wikipedia-api
+pywhatkit
+pyaudio
+pyautogui
+setuptools
+ speedtest-cli
+
+scikit-learn
+textblob
+g4f
+curl_cffi
+sumy
+psutil
