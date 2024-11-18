@@ -241,10 +241,11 @@ def track_emotion_phrases(text):
         return None
 
 def print_animated_message(message):
+
     for char in message:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.050)  # Adjust the sleep duration for the animation speed
+        # time.sleep(0.10)  # Adjust the sleep duration for the animation speed
     print()
 def speakbasic(text):
     try:

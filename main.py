@@ -27,7 +27,7 @@ def speak_async(text):
 
 def jarvis():
     # Initial greeting
-    text = listen().lower()
+    text = " ".join([word for word in listen().lower().split() if word != 'jarvis'])
 
     if any(keyword in text for keyword in wake_key_word):
         wish()
@@ -187,11 +187,11 @@ def jarvis():
                 speak_async(content)
 
             # Window Management
-        elif "minimize window" in text:
+        elif "minimize window" in text or "minimise window" in text:
             speak_async("Minimizing the window")
             minimize_window()
 
-        elif "maximize window" in text:
+        elif "maximize window" in text or "maximise window" in text:
             speak_async("Maximizing the window")
             maximize_window()
 
@@ -229,7 +229,7 @@ def jarvis():
             speak_async("Opening the Start menu")
             open_start_menu()
 
-        elif "minimize all" in text:
+        elif "minimize all" in text or  "minimise all" in text:
             speak_async("Minimizing all windows")
             minimize_all_windows()
 
@@ -238,7 +238,7 @@ def jarvis():
             speak_async("Locking the computer")
 
 
-        elif "file explorer" in text:
+        elif "file explorer" in text or "open file" in text:
             open_file_explorer()
             speak_async("Opening File Explorer")
 
@@ -262,5 +262,6 @@ def jarvis():
         elif any(keyword in text for keyword in bye_key_word):
             speak_async(random.choice(res_bye))
             break
+
 
 jarvis()

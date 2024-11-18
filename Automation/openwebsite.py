@@ -1,5 +1,5 @@
 import webbrowser
-from random import *
+import random
 
 from Base.Mouth import speak
 from Data.DLG import *

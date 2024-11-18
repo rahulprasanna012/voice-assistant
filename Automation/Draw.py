@@ -12,7 +12,7 @@ def draw_circle(radius=10, steps=120):
     time.sleep(3)
 
     # Move to the drawing area in Paint
-    pyautogui.moveTo(400, 300, duration=1)
+    pyautogui.moveTo(600, 300, duration=1)
     pyautogui.click()
 
     for step in range(steps):
@@ -65,7 +65,7 @@ def draw_wave(amplitude=50, wavelength=50, length=500):
     time.sleep(3)
 
     # Move to the drawing area in Paint
-    pyautogui.moveTo(100, 400, duration=1)
+    pyautogui.moveTo(200, 400, duration=1)
     pyautogui.click()
 
     for x in range(0, length, 5):
