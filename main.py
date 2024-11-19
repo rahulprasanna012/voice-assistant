@@ -1,10 +1,10 @@
-import time
 from Function.presentation_control import *
 from Base.Ear import *
 from Generator.big_data import *
 from Function.wish import *
 from Model.model2 import *
 from Model.model1 import *
+import pywhatkit as kit
 from Function.temperature import *
 from Function.joke import *
 from Function.find_ip import *
@@ -22,6 +22,9 @@ from Base.Mouth import *
 from Data.DLG import *
 from Function.intro import intoduction
 import random
+def send_whatsapp_message(number, message):
+    kit.sendwhatmsg_instantly(f"+91{number}", message)
+
 def speak_async(text):
 
     threading.Thread(target=speak, args=(text,)).start()
@@ -118,8 +121,18 @@ def jarvis():
         elif "scroll to bottom" in text:
             speak_async("Scrolling to the bottom")
             scroll_to_bottom()
+        elif "send whatsapp message" in text or "send message" in text or "message whatsapp" in text:
 
-        # Opening apps and websites
+            speak(
+                'On what number should I send the message sir? Please enter in the console: ')
+            number = input("Enter the number: ")
+
+            speak("What is the message sir?")
+            message =listen()
+            send_whatsapp_message(number, message)
+            speak("I've sent the message sir.")
+
+
         elif "open" in text:
             if "website" in text or "site" in text:
                 site = text.replace("open", "").replace("website", "").replace("site", "").strip()

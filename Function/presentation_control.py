@@ -1,7 +1,6 @@
 
 import pyautogui
-from pptx import Presentation
-from g4f.client import Client
+
 
 import asyncio
 import warnings
