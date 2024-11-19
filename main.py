@@ -1,5 +1,5 @@
 import time
-
+from Function.presentation_control import *
 from Base.Ear import *
 from Generator.big_data import *
 from Function.wish import *
@@ -20,9 +20,10 @@ from Generator.codegenerator import *
 from Automation.windows import *
 from Base.Mouth import *
 from Data.DLG import *
+from Function.intro import intoduction
 import random
 def speak_async(text):
-    """Runs the speak function in a separate thread."""
+
     threading.Thread(target=speak, args=(text,)).start()
 
 def jarvis():
@@ -38,9 +39,31 @@ def jarvis():
         text = listen().lower()
         Greating(text)
 
-        # Chat commands
-        if "chat with me" in text or "chat" in text:
-            if 'my' in text:
+        if 'jarvis are you' in text or 'jarvis get ready' in text:
+            speak_async(
+                "Hello! I’m here and ready to assist you. Let's make this presentation an amazing one. What can I help you with?")
+
+        elif 'short into' in text or 'intro' in text:
+
+            intoduction()
+        elif "start presentation" in text or "start slide show" in text:
+            speak_async("Starting the presentation")
+            start_presentation()  # Call the function to start the presentation
+
+        elif "next slide" in text or "next" in text:
+            speak_async("Moving to the next slide")
+            next_slide()  # Call the function to move to the next slide
+
+        elif "previous slide" in text or "previous" in text:
+            speak_async("Going to the previous slide")
+            previous_slide()  # Call the function to go to the previous slide
+
+        elif "end presentation" in text or "end slideshow" in text:
+            speak_async("Ending the presentation")
+            end_presentation()  # Call the function to end the presentation
+
+        elif "chat with model" in text or "chat" in text:
+            if 'model' in text:
                 speak_async("I am model one chatbot.")
                 while True:
                     user = listen().lower()
@@ -73,7 +96,7 @@ def jarvis():
             what_is_the_time()
 
         # Internet speed
-        elif "internet speed" in text:
+        elif "internet" in text:
             speak_async("Checking your internet speed")
             get_internet_speed()
 
@@ -132,7 +155,7 @@ def jarvis():
                 draw_zigzag()
 
         # Google Search
-        elif text.endswith("search in google") or text.startswith("search in google") or text.endswith("search on google") or text.startswith("search on google"):
+        elif "search in google" in text or "search on google" in text:
             query = text.replace("search in google", "").replace("search on google", "").strip()
             speak_async(f"Searching {query} on Google")
             search_google(query)
@@ -220,6 +243,7 @@ def jarvis():
             speak_async("Selecting all text")
             select_all()
 
+
         elif "hold shift" in text:
             speak_async("Holding shift for selection")
             hold_shift_select()
@@ -232,6 +256,7 @@ def jarvis():
         elif "minimize all" in text or  "minimise all" in text:
             speak_async("Minimizing all windows")
             minimize_all_windows()
+
 
         elif "lock computer" in text:
             lock_computer()

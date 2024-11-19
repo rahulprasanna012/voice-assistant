@@ -7,8 +7,7 @@ pywhatkit
 pyaudio
 pyautogui
 setuptools
- speedtest-cli
-
+speedtest-cli
 scikit-learn
 textblob
 g4f

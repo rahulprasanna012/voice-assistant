@@ -1,16 +1,38 @@
-from g4f.client import Client
+import os
+os.environ['HF_HUB_DISABLE_SYMLINKS_WARNING'] = '1'
+
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
 
 def llm2(text):
-    client = Client()
-    response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
-        messages=[{"role": 'Innovatively trains Jarvis Ai Assistant, adept at recognizing nuanced responses, including sarcasm. Implements continuous learning for dynamic interactions. Ensures Jarvis maintains respectful assistance, addressing users as "sir." Expert in refining language nuances, fostering an evolving and adaptable AI for superior user engagement',"content": f"{text}"}]
-    )
+    # Load GPT-J (6B) or GPT-Neo (1.3B or 2.7B)
+    model_name = "EleutherAI/gpt-j-6B"  # or "EleutherAI/gpt-neo-2.7B" for GPT-Neo
+    model = AutoModelForCausalLM.from_pretrained(model_name)
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-    x = response.choices[0].message.content
-    x = x.replace("YouChat","jarvis")
-    x = x.replace("large language model","Ai Assistant")
-    x = x.replace("from You.com.","Created by Prasanna")
-    return x
+    # Encode the input text
+    inputs = tokenizer(text, return_tensors="pt")
 
-print(llm2("Python code for factorial"))
+    # Generate response
+    with torch.no_grad():
+        outputs = model.generate(
+            inputs['input_ids'],
+            max_length=150,
+            num_return_sequences=1,
+            no_repeat_ngram_size=2,
+            pad_token_id=tokenizer.eos_token_id
+        )
+
+    # Decode the generated response
+    response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+    # Format and customize response
+    response = response.replace("YouChat", "Jarvis")
+    response = response.replace("large language model", "AI Assistant")
+    response = response.replace("from You.com.", "Created by Prasanna")
+
+    return response
+
+
+# Test the function
+print(llm2("What is AI?"))

@@ -4,7 +4,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
 # Load the JSON data
-with open(r'D:\Myjarvis\pythonProject1\Data\intents.json') as file:
+with open(r'C:\Users\rajap\PycharmProjects\voice-assistant\Data\intents.json') as file:
     data = json.load(file)
 
 # Extract training data

@@ -6,7 +6,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import os
 
-# Download required NLTK data
+
 # nltk.download('stopwords')
 # nltk.download('punkt')
 
@@ -70,7 +70,7 @@ def get_answer(question, vectorizer, X, dataset):
 # Main function
 def mind(text):
     try:
-        dataset_path = r'D:\Myjarvis\pythonProject1\Data\qna.txt'  # Replace with your dataset path
+        dataset_path = r'C:\Users\rajap\PycharmProjects\voice-assistant\Data\qna.txt'  # Replace with your dataset path
         dataset = load_dataset(dataset_path)
 
         vectorizer, X = train_tfidf_vectorizer(dataset)

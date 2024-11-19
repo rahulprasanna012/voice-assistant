@@ -1,4 +1,5 @@
 import pyautogui
+import ctypes
 # Window controls
 def minimize_window():
     pyautogui.hotkey('win', 'down')
@@ -38,8 +39,13 @@ def open_start_menu():
 def minimize_all_windows():
     pyautogui.hotkey('win', 'd')
 
+
+
 def lock_computer():
-    pyautogui.hotkey('win', 'l')
+    ctypes.windll.user32.LockWorkStation()
+
+# Call the function
+
 
 def open_file_explorer():
     pyautogui.hotkey('win', 'e')

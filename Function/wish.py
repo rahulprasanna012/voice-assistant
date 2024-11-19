@@ -26,7 +26,7 @@ def wish():
 
 
 def Greating(text):
-    if "good morning" in text or "good afternoon" in text or "good evening" in text or "good night" in text:
+    if "good morning"  in text or 'hey' in text or "good afternoon" in text or "good evening" in text or "good night" in text:
         wish()
     else:
         pass
