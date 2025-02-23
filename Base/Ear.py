@@ -28,3 +28,4 @@ def listen():
         return ""
     return query
 # speak("Hello, I'm JARVIS")
+listen()

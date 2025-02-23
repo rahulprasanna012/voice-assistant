@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33827179-cb05-4e6d-8a41-051b96fd9349" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Data/FullText.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/new_data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/sample.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/model_pdf.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/pythonProject1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_19_2024_8_59_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_19_2024_8_59_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/prasanna.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Function/presentation_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/Function/presentation_control.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/model1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/model1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base/Ear.py" beforeDir="false" afterPath="$PROJECT_DIR$/Base/Ear.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/model2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/model2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,18 +35,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "rahulprasanna012"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;rahulprasanna012&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/rahulprasanna012/voice-assistant.git",
-    "accountId": "142d5148-7d4e-4404-abae-b0a8372ed1e3"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/rahulprasanna012/voice-assistant.git&quot;,
+    &quot;accountId&quot;: &quot;142d5148-7d4e-4404-abae-b0a8372ed1e3&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -53,44 +58,76 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.Draw.executor": "Run",
-    "Python.Ear.executor": "Run",
-    "Python.Mouth.executor": "Run",
-    "Python.app.executor": "Run",
-    "Python.big_data.executor": "Run",
-    "Python.check_net_speed.executor": "Run",
-    "Python.codegenerator.executor": "Run",
-    "Python.joke.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.model1.executor": "Run",
-    "Python.model2.executor": "Run",
-    "Python.model_train.executor": "Run",
-    "Python.mouse.executor": "Run",
-    "Python.openapp.executor": "Run",
-    "Python.presentation_control.executor": "Run",
-    "Python.small_data.executor": "Run",
-    "Python.tab_auto.executor": "Run",
-    "Python.temperature.executor": "Run",
-    "Python.time.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.Draw.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Ear.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Mouth.executor&quot;: &quot;Run&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.big_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.check_net_speed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.codegenerator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.joke.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model_pdf.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model_train.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mouse.executor&quot;: &quot;Run&quot;,
+    &quot;Python.openapp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.presentation_control.executor&quot;: &quot;Run&quot;,
+    &quot;Python.small_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tab_auto.executor&quot;: &quot;Run&quot;,
+    &quot;Python.temperature.executor&quot;: &quot;Run&quot;,
+    &quot;Python.time.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\final-year-project-2025\Data" />
       <recent name="D:\Myjarvis\pythonProject1\templates" />
       <recent name="D:\Myjarvis\pythonProject1\Automation" />
       <recent name="D:\Myjarvis\pythonProject1\Data" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="model2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Model/model2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.model2" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
+        <option value="bundled-python-sdk-fc1d50d2d915-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.24978.54" />
       </set>
     </attachedChunks>
   </component>
