@@ -300,6 +300,8 @@ welcomedlg =[
 "Well met, kind sir! Always appreciated in our discussions.",
 ]
 wake_key_word =[
+"hey",
+    "hey jar"
 "hi",
 "hello",
 "jar",

@@ -1,5 +1,7 @@
 from Function.presentation_control import *
 from Base.Ear import *
+from Function.reminder import *
+from Function.utils import speak_async
 from Generator.big_data import *
 from Function.wish import *
 from Model.model2 import *
@@ -18,6 +20,8 @@ from Automation.openwebsite import *
 from Generator.codegenerator import *
 from Automation.windows import *
 from Base.Mouth import *
+from Function.reminder import check_reminders
+
 from Data.DLG import *
 from Function.intro import intoduction
 import random
@@ -28,8 +32,6 @@ import pyautogui
 def send_whatsapp_message(number, message):
     kit.sendwhatmsg_instantly(f"+91{number}", message)
 
-def speak_async(text):
-    threading.Thread(target=speak, args=(text,)).start()
 
 def handle_presentation_commands(text):
     if "start presentation" in text or "start slide show" in text:
@@ -153,45 +155,68 @@ def handle_system_commands(text):
         take_screenshot()
 
 def jarvis():
-    text = " ".join([word for word in listen().lower().split() if word != 'jarvis'])
+    threading.Thread(target=check_reminders, daemon=True).start()
+    text = listen().lower()
 
     if any(keyword in text for keyword in wake_key_word):
         wish()
 
+
+
     while True:
+
         time.sleep(3)
         text = listen().lower()
         Greating(text)
 
+        command_handled = False
+
         if 'jarvis are you' in text or 'jarvis get ready' in text:
             speak_async("Hello! I’m here and ready to assist you. Let's make this presentation an amazing one. What can I help you with?")
+            command_handled = True
+
         elif 'short into' in text or 'intro' in text:
             intoduction()
+            command_handled = True
+
         elif "temperature" in text:
             speak_async("Checking the temperature")
             Temp()
+            command_handled = True
+
         elif "tell me joke" in text or "joke" in text:
             joke()
+            command_handled = True
+
         elif "time" in text or "what is time" in text:
             what_is_the_time()
+            command_handled = True
+
         elif "internet" in text:
             speak_async("Checking your internet speed")
             get_internet_speed()
+            command_handled = True
+
         elif "ip address" in text:
             speak_async("Finding your IP address")
-            find_my_ip()
-        elif "scroll up" in text:
-            speak_async("Scrolling up")
-            scroll_up()
-        elif "scroll down" in text:
-            speak_async("Scrolling down")
-            scroll_down()
-        elif "scroll to top" in text:
-            speak_async("Scrolling to the top")
-            scroll_to_top()
-        elif "scroll to bottom" in text:
-            speak_async("Scrolling to the bottom")
-            scroll_to_bottom()
+            ip()
+            command_handled = True
+
+        elif "scroll" in text:
+            if "up" in text:
+                speak_async("Scrolling up")
+                scroll_up()
+            elif "down" in text:
+                speak_async("Scrolling down")
+                scroll_down()
+            elif "top" in text:
+                speak_async("Scrolling to the top")
+                scroll_to_top()
+            elif "bottom" in text:
+                speak_async("Scrolling to the bottom")
+                scroll_to_bottom()
+            command_handled = True
+
         elif "send whatsapp message" in text or "send message" in text or "message whatsapp" in text:
             speak('On what number should I send the message sir? Please enter in the console: ')
             number = input("Enter the number: ")
@@ -199,6 +224,8 @@ def jarvis():
             message = listen()
             send_whatsapp_message(number, message)
             speak("I've sent the message sir.")
+            command_handled = True
+
         elif "open" in text:
             if "website" in text or "site" in text:
                 site = text.replace("open", "").replace("website", "").replace("site", "").strip()
@@ -211,18 +238,26 @@ def jarvis():
                 app = text.replace("open", "").strip()
                 speak_async(f"Opening {app}")
                 open(app)
+            command_handled = True
+
         elif "draw" in text:
             handle_drawing_commands(text)
+            command_handled = True
+
         elif "search in google" in text or "search on google" in text:
             query = text.replace("search in google", "").replace("search on google", "").strip()
             speak_async(f"Searching {query} on Google")
             search_google(query)
+            command_handled = True
+
         elif "type" in text or 'write' in text:
             while True:
                 content = listen().lower()
                 if "exit" in content or "stop" in content:
                     break
                 pyautogui.write(content)
+            command_handled = True
+
         elif "deep search" in text:
             speak_async("What should I write?")
             query = listen()
@@ -230,19 +265,37 @@ def jarvis():
             pyautogui.write(content)
             time.sleep(5)
             speak_async(content)
+            command_handled = True
+
         elif "move mouse" in text or "click" in text or "double click" in text or "scroll" in text or "drag" in text:
             handle_command(text)
+            command_handled = True
+        elif "set reminder" in text or "remind me" in text:
+            speak("What should I remind you about?")
+            task = listen()
+            speak("When should I remind you?")
+            time_input = listen()
+            remind_time = get_reminder_time(time_input)
+
+            if remind_time:
+                add_reminder(task, remind_time)
+                speak(f"Reminder set for {task} at {remind_time.strftime('%I:%M %p')}")
+            else:
+                speak("Sorry, I couldn't understand the time.")
+            command_handled = True
+
+
         elif any(keyword in text for keyword in bye_key_word):
             speak_async(random.choice(res_bye))
             break
-        else:
+
+        if not command_handled:
+            if handle_presentation_commands(text): return
+            if handle_browser_commands(text): return
+            if handle_window_commands(text): return
+            if handle_clipboard_commands(text): return
+            if handle_system_commands(text): return
             response = mind(text)
             speak_async(response)
-
-        handle_presentation_commands(text)
-        handle_browser_commands(text)
-        handle_window_commands(text)
-        handle_clipboard_commands(text)
-        handle_system_commands(text)
 
 jarvis()

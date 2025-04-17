@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33827179-cb05-4e6d-8a41-051b96fd9349" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Data/FullText.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/new_data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/sample.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/model_pdf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Function/reminder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Function/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/pythonProject1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_19_2024_8_59_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_19_2024_8_59_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Base/Ear.py" beforeDir="false" afterPath="$PROJECT_DIR$/Base/Ear.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/model2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/model2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DLG.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DLG.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Function/find_ip.py" beforeDir="false" afterPath="$PROJECT_DIR$/Function/find_ip.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
@@ -58,35 +55,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Python.Draw.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Ear.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Mouth.executor&quot;: &quot;Run&quot;,
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;Python.big_data.executor&quot;: &quot;Run&quot;,
-    &quot;Python.check_net_speed.executor&quot;: &quot;Run&quot;,
-    &quot;Python.codegenerator.executor&quot;: &quot;Run&quot;,
-    &quot;Python.joke.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.model1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.model2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.model_pdf.executor&quot;: &quot;Run&quot;,
-    &quot;Python.model_train.executor&quot;: &quot;Run&quot;,
-    &quot;Python.mouse.executor&quot;: &quot;Run&quot;,
-    &quot;Python.openapp.executor&quot;: &quot;Run&quot;,
-    &quot;Python.presentation_control.executor&quot;: &quot;Run&quot;,
-    &quot;Python.small_data.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tab_auto.executor&quot;: &quot;Run&quot;,
-    &quot;Python.temperature.executor&quot;: &quot;Run&quot;,
-    &quot;Python.time.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.Draw.executor": "Run",
+    "Python.Ear.executor": "Run",
+    "Python.Mouth.executor": "Run",
+    "Python.app.executor": "Run",
+    "Python.big_data.executor": "Run",
+    "Python.check_net_speed.executor": "Run",
+    "Python.codegenerator.executor": "Run",
+    "Python.joke.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.model1.executor": "Run",
+    "Python.model2.executor": "Run",
+    "Python.model_pdf.executor": "Run",
+    "Python.model_train.executor": "Run",
+    "Python.mouse.executor": "Run",
+    "Python.openapp.executor": "Run",
+    "Python.presentation_control.executor": "Run",
+    "Python.reminder.executor": "Run",
+    "Python.small_data.executor": "Run",
+    "Python.tab_auto.executor": "Run",
+    "Python.temperature.executor": "Run",
+    "Python.time.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\final-year-project-2025\Data" />
@@ -154,6 +152,11 @@
           <url>file://$PROJECT_DIR$/Function/joke.py</url>
           <line>8</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>156</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

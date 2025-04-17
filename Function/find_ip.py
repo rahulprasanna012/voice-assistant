@@ -9,3 +9,5 @@ def find_my_ip():
 def ip():
     response=find_my_ip()
     speak(response)
+
+    return ""

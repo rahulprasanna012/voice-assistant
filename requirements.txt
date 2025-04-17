@@ -16,3 +16,4 @@ sumy
 psutil
 nltk
 pymupdf
+dateparser
