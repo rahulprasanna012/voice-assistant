@@ -17,3 +17,4 @@ psutil
 nltk
 pymupdf
 dateparser
+customtkinter

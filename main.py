@@ -22,6 +22,11 @@ from Automation.windows import *
 from Base.Mouth import *
 from Function.reminder import check_reminders
 
+import tkinter as tk
+
+from tkinter import simpledialog
+
+
 from Data.DLG import *
 from Function.intro import intoduction
 import random
@@ -217,13 +222,34 @@ def jarvis():
                 scroll_to_bottom()
             command_handled = True
 
+
         elif "send whatsapp message" in text or "send message" in text or "message whatsapp" in text:
-            speak('On what number should I send the message sir? Please enter in the console: ')
-            number = input("Enter the number: ")
-            speak("What is the message sir?")
-            message = listen()
-            send_whatsapp_message(number, message)
-            speak("I've sent the message sir.")
+
+
+            # Create a root window and hide it
+
+            root = tk.Tk()
+
+            root.withdraw()
+
+            # Ask for phone number via dialog box
+            speak('On what number should I send the message sir? Please enter in the box: ')
+
+
+            number = simpledialog.askstring("Input", "On what number should I send the message sir?", parent=root)
+
+            if number:  # Only proceed if user didn't cancel
+
+                speak("What is the message sir?")
+
+                message = listen()
+
+                if message:  # Only proceed if message was provided
+
+                    send_whatsapp_message(number, message)
+
+                    speak("I've sent the message sir.")
+
             command_handled = True
 
         elif "open" in text:
@@ -290,12 +316,12 @@ def jarvis():
             break
 
         if not command_handled:
-            if handle_presentation_commands(text): return
-            if handle_browser_commands(text): return
-            if handle_window_commands(text): return
-            if handle_clipboard_commands(text): return
-            if handle_system_commands(text): return
+            handle_presentation_commands(text)
+            handle_browser_commands(text)
+            handle_window_commands(text)
+            handle_clipboard_commands(text)
+            handle_system_commands(text)
+
             response = mind(text)
             speak_async(response)
 
-jarvis()
