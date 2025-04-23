@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33827179-cb05-4e6d-8a41-051b96fd9349" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gui_jarvis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Function/factory_function.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Function/learn_english.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Base/Mouth.py" beforeDir="false" afterPath="$PROJECT_DIR$/Base/Mouth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PyWhatKit_DB.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PyWhatKit_DB.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
@@ -55,6 +54,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "Python tests.Doctests in file_download.executor": "Run",
     "Python.Draw.executor": "Run",
     "Python.Ear.executor": "Run",
     "Python.Mouth.executor": "Run",
@@ -64,6 +64,7 @@
     "Python.codegenerator.executor": "Run",
     "Python.gui_jarvis.executor": "Run",
     "Python.joke.executor": "Run",
+    "Python.learn_english.executor": "Run",
     "Python.main.executor": "Run",
     "Python.model1.executor": "Run",
     "Python.model2.executor": "Run",
@@ -95,35 +96,6 @@
       <recent name="D:\Myjarvis\pythonProject1\Data" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="model2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="pythonProject1" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Model" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Model/model2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.model2" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -154,11 +126,6 @@
           <url>file://$PROJECT_DIR$/Function/joke.py</url>
           <line>8</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>69</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

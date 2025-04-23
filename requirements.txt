@@ -18,3 +18,9 @@ nltk
 pymupdf
 dateparser
 customtkinter
+language_tool_python
+#java too needed
+wheel
+ happytransformer
+ torch
+ transformers
